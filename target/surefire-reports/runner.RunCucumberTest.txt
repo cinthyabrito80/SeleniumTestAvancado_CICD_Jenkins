@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: runner.RunCucumberTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 0, Errors: 9, Skipped: 0, Time elapsed: 9.451 s <<< FAILURE! - in runner.RunCucumberTest
+Cadastro de usuário.Registrar um novo usuário com sucesso  Time elapsed: 4.823 s  <<< ERROR!
+java.lang.NullPointerException
+
+Cadastro de usuário.Registrar um novo usuário com sucesso  Time elapsed: 4.824 s  <<< ERROR!
+java.lang.StackOverflowError
+
+Cadastro de usuário.Registrar um novo usuário com sucesso  Time elapsed: 4.824 s  <<< ERROR!
+java.lang.StackOverflowError
+
+Cadastro de usuário.Registrar um novo usuário com sucesso  Time elapsed: 4.824 s  <<< ERROR!
+java.lang.StackOverflowError
+
+Login de usuário.Fazer login com usario e senha validos  Time elapsed: 3.805 s  <<< ERROR!
+java.lang.NullPointerException
+
+Login de usuário.Fazer login com usario e senha validos  Time elapsed: 3.805 s  <<< ERROR!
+java.lang.StackOverflowError
+
+Login de usuário.Fazer login com usario e senha validos  Time elapsed: 3.805 s  <<< ERROR!
+java.lang.StackOverflowError
+
+Login de usuário.Fazer login com usario e senha validos  Time elapsed: 3.805 s  <<< ERROR!
+java.lang.StackOverflowError
+
+runner.RunCucumberTest  Time elapsed: 3.805 s  <<< ERROR!
+java.lang.NullPointerException
+	at runner.RunCucumberTest.stop(RunCucumberTest.java:25)
+
