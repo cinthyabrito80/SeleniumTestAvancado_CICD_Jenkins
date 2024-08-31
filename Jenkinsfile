@@ -17,7 +17,7 @@ pipeline {
             post {
                 always {
                     echo 'Gerando relatório Cucumber...'
-                    cucumber fileIncludePattern: '**/target/cucumber-reports/*.json',
+                    cucumber fileIncludePattern: '**/target/cucumber/*.json',
                              sortingMethod: 'ALPHABETICAL'
                 }
             }
