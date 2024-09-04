@@ -3,7 +3,7 @@ package steps;
 import io.cucumber.java.After;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.pt.Dado;
-import org.codehaus.plexus.personality.plexus.lifecycle.phase.Suspendable;
+//import org.codehaus.plexus.personality.plexus.lifecycle.phase.Suspendable;
 import pages.HomePage;
 import runner.RunBase;
 import runner.RunCucumberTest;
