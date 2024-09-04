@@ -1,43 +1,31 @@
 pipeline {
     agent any
-
     stages {
         stage('Build') {
             steps {
                 echo 'Construindo o projeto...'
-                sh 'mvn clean compile'
+                bat 'mvn clean install'
             }
         }
-
         stage('Test') {
             steps {
-                echo 'Executando o Teste Cucumber...'
-                sh 'mvn test'
-            }
-            post {
-                always {
-                    echo 'Gerando relatório Cucumber...'
-                    cucumber fileIncludePattern: '**/target/cucumber/*.json',
-                             sortingMethod: 'ALPHABETICAL'
-                }
+                echo 'Executando os testes...'
+                bat 'mvn test'
             }
         }
-
         stage('Report') {
             steps {
-                echo 'Arquivando Relatório...'
-                archiveArtifacts artifacts: '**/target/cucumber/*', allowEmptyArchive: true
+                echo 'Gerando relatório...'
+                // Adicione o comando de relatório, por exemplo:
+				archiveArtifacts artifacts: '**/target/cucumber/*', allowEmptyArchive: true
+                bat 'mvn surefire-report:report'
             }
         }
     }
-
     post {
         always {
             echo 'Cleaning up workspace...'
             cleanWs()
-        }
-        success {
-            echo 'Build successful!'
         }
         failure {
             echo 'Build failed!'
